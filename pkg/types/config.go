@@ -279,8 +279,14 @@ type GeeseConfig struct {
 }
 
 type AlluxioConfig struct {
-	Debug bool `key:"debug" json:"debug"`
-	// TODO: Add whatever config flags alluxio may need
+	Debug               bool   `key:"debug" json:"debug"`
+	CoordinatorHostname string `key:"coordinatorHostname" json:"coordinator_hostname"`
+	EtcdEndpoint        string `key:"etcdEndpoint" json:"etcd_endpoint"`
+	EtcdUsername        string `key:"etcdUsername" json:"etcd_username"`
+	EtcdPassword        string `key:"etcdPassword" json:"etcd_password"`
+	//EtcdTlsEnabled      bool   `key:"etcdTlsEnabled" json:"etcd_tls_enabled"`
+	//EtcdTlsCaCert       bool   `key:"etcdTlsCaCert" json:"etcd_tls_ca_cert"`
+	ImageUrl string `key:"imageUrl" json:"image_url"`
 }
 
 // @go2proto

@@ -42,6 +42,11 @@ storage:
     defaultRegion: us-east-1
     alluxio:
       debug: false
+      coordinatorHostname: xxx
+      etcdEndpoint: xxx
+      etcdUsername: username
+      etcdPassword: password
+      imageUrl: image:tag
     geese:
       debug: false
       fsyncOnClose: true
@@ -62,7 +67,7 @@ storage:
       cacheStreamingEnabled: false
 gateway:
   host: beta9-gateway
-  invokeURLType: path
+  invokeURLType: host
   grpc:
     externalHost: beta9-gateway
     externalPort: 1993
