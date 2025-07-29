@@ -119,6 +119,7 @@ func (s *WorkspaceStorageManager) Mount(workspaceName string, workspaceStorage *
 				//EtcdTlsEnabled:      s.config.WorkspaceStorage.Alluxio.EtcdTlsEnabled,
 				//EtcdTlsCaCert:       s.config.WorkspaceStorage.Alluxio.EtcdTlsCaCert,
 				ImageUrl: s.config.WorkspaceStorage.Alluxio.ImageUrl,
+				License:  s.config.WorkspaceStorage.Alluxio.License,
 			},
 		}, s.cacheClient)
 		if err != nil {

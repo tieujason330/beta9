@@ -287,6 +287,7 @@ type AlluxioConfig struct {
 	//EtcdTlsEnabled      bool   `key:"etcdTlsEnabled" json:"etcd_tls_enabled"`
 	//EtcdTlsCaCert       bool   `key:"etcdTlsCaCert" json:"etcd_tls_ca_cert"`
 	ImageUrl string `key:"imageUrl" json:"image_url"`
+	License  string `key:"license" json:"license"`
 }
 
 // @go2proto

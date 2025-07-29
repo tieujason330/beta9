@@ -23,12 +23,13 @@ func (s *AlluxioStorage) Mount(localPath string) error {
 
 	alluxioJavaOpts := []string{
 		"-Xmx32g -Xms8g -XX:MaxDirectMemorySize=32g",
+		fmt.Sprintf("-Dalluxio.coordinator.hostname=%v", s.config.CoordinatorHostname),
 		fmt.Sprintf("-Dalluxio.etcd.endpoints=%v", s.config.EtcdEndpoint),
 		fmt.Sprintf("-Dalluxio.etcd.username=%v", s.config.EtcdUsername),
 		fmt.Sprintf("-Dalluxio.etcd.password=%v", s.config.EtcdPassword),
 		"-Dalluxio.etcd.tls.enabled=true",                               // s.config.EtcdTlsEnabled),
 		"-Dalluxio.etcd.tls.ca.cert=/etc/ssl/certs/ca-certificates.crt", //s.config.EtcdTlsCaCert),
-		fmt.Sprintf("-Dalluxio.coordinator.hostname=%v", s.config.CoordinatorHostname),
+		fmt.Sprintf("-Dalluxio.license=%v", s.config.License),
 		"-Dalluxio.worker.membership.manager.type=ETCD",
 		"-Dalluxio.mount.table.source=ETCD",
 		"-Dalluxio.user.metadata.cache.max.size=0",

@@ -47,6 +47,7 @@ storage:
       etcdUsername: username
       etcdPassword: password
       imageUrl: image:tag
+      license: xxx
     geese:
       debug: false
       fsyncOnClose: true
