@@ -112,6 +112,7 @@ func (s *WorkspaceStorageManager) Mount(workspaceName string, workspaceStorage *
 			FilesystemPath: mountPath,
 			Alluxio: types.AlluxioConfig{
 				Debug:               s.config.WorkspaceStorage.Alluxio.Debug,
+				ClusterName:         s.config.WorkspaceStorage.Alluxio.ClusterName,
 				CoordinatorHostname: s.config.WorkspaceStorage.Alluxio.CoordinatorHostname,
 				EtcdEndpoint:        s.config.WorkspaceStorage.Alluxio.EtcdEndpoint,
 				EtcdUsername:        s.config.WorkspaceStorage.Alluxio.EtcdUsername,

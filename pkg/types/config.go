@@ -280,6 +280,7 @@ type GeeseConfig struct {
 
 type AlluxioConfig struct {
 	Debug               bool   `key:"debug" json:"debug"`
+	ClusterName         string `key:"clusterName" json:"cluster_name"`
 	CoordinatorHostname string `key:"coordinatorHostname" json:"coordinator_hostname"`
 	EtcdEndpoint        string `key:"etcdEndpoint" json:"etcd_endpoint"`
 	EtcdUsername        string `key:"etcdUsername" json:"etcd_username"`

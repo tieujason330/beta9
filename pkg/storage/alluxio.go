@@ -23,6 +23,7 @@ func (s *AlluxioStorage) Mount(localPath string) error {
 
 	alluxioJavaOpts := []string{
 		"-Xmx32g -Xms8g -XX:MaxDirectMemorySize=32g",
+		fmt.Sprintf("-Dalluxio.cluster.name=%v", s.config.ClusterName),
 		fmt.Sprintf("-Dalluxio.coordinator.hostname=%v", s.config.CoordinatorHostname),
 		fmt.Sprintf("-Dalluxio.etcd.endpoints=%v", s.config.EtcdEndpoint),
 		fmt.Sprintf("-Dalluxio.etcd.username=%v", s.config.EtcdUsername),
